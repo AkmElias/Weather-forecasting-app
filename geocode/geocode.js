@@ -14,9 +14,9 @@ const geocodeAddress = (address, callback) => {
         callback("Unable to find the address");
       } else if (body.status === "ok") {
         callback(undefined, {
-          Address: body.results[0].formatted_address,
-          Lattitude: body.results[0].geometry.location.lat,
-          Langnitude: body.results[0].geometry.location.lng,
+          address: body.results[0].formatted_address,
+          latitude: body.results[0].geometry.location.lat,
+          longitiude: body.results[0].geometry.location.lng,
         });
       }
     }
